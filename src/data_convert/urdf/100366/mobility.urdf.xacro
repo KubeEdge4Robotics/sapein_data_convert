@@ -1,0 +1,148 @@
+<robot name="partnet_009f75cf-8c87-4eaf-b7ff-c0e59a5bad3f" xmlns:xacro="http://wiki.ros.org/xacro">
+	<xacro:property name="scale" value="100" /><link name="base" />
+	<link name="link_0">
+		<visual name="switch-1">
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-12.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<visual name="switch-1">
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-11.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-12.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-11.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_0" type="prismatic">
+		<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+		<axis xyz="0 0 -1" />
+		<child link="link_0" />
+		<parent link="link_2" />
+		<limit lower="${-0.06400000000000006 / scale}" upper="${0.03200000000000003 / scale}" effort="10.0" velocity="0.1" />
+	</joint>
+	<link name="link_1">
+		<visual name="switch-2">
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-9.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-9.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_1" type="prismatic">
+		<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+		<axis xyz="0 0 -1" />
+		<child link="link_1" />
+		<parent link="link_2" />
+		<limit lower="${-0.008000000000000007 / scale}" upper="${0.008000000000000007 / scale}" effort="10.0" velocity="0.1" />
+	</joint>
+	<link name="link_2">
+		<visual name="base_body-3">
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-4.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<visual name="base_body-3">
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-3.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<visual name="base_body-3">
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-2.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<visual name="base_body-3">
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-8.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<visual name="base_body-3">
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-5.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<visual name="base_body-3">
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-6.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<visual name="base_body-3">
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-1.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-4.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-3.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-2.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-8.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-5.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-6.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100366/textured_objs/original-1.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_2" type="fixed">
+		<origin rpy="1.570796326794897 0 -1.570796326794897" xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+		<child link="link_2" />
+		<parent link="base" />
+	</joint>
+</robot>

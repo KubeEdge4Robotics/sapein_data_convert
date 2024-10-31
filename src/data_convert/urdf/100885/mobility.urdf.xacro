@@ -1,0 +1,106 @@
+<robot name="partnet_367cf1804054c94c297c85b9a7ad9cde" xmlns:xacro="http://wiki.ros.org/xacro">
+	<xacro:property name="scale" value="100" /><link name="base" />
+	<link name="link_0">
+		<visual name="switch-1">
+			<origin xyz="${-0.6004359999999993 / scale} ${-0.05795399702183715 / scale} ${0.21110114892914889 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100885/textured_objs/original-1.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="${-0.6004359999999993 / scale} ${-0.05795399702183715 / scale} ${0.21110114892914889 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100885/textured_objs/original-1.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_0" type="revolute">
+		<origin xyz="${0.6004359999999993 / scale} ${0.05795399702183715 / scale} ${-0.21110114892914889 / scale}" />
+		<axis xyz="-1 0 0" />
+		<child link="link_0" />
+		<parent link="link_4" />
+		<limit lower="-0.8293804605477054" upper="1.426283064729766" effort="10.0" velocity="0.1" />
+	</joint>
+	<link name="link_1">
+		<visual name="switch-2">
+			<origin xyz="${-0.6004359999999993 / scale} ${-0.05795399702183715 / scale} ${0.21110114892914889 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100885/textured_objs/original-2.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="${-0.6004359999999993 / scale} ${-0.05795399702183715 / scale} ${0.21110114892914889 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100885/textured_objs/original-2.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_1" type="revolute">
+		<origin xyz="${0.6004359999999993 / scale} ${0.05795399702183715 / scale} ${-0.21110114892914889 / scale}" />
+		<axis xyz="-1 0 0" />
+		<child link="link_1" />
+		<parent link="link_4" />
+		<limit lower="-0.8293804605477054" upper="1.426283064729766" effort="10.0" velocity="0.1" />
+	</joint>
+	<link name="link_2">
+		<visual name="switch-3">
+			<origin xyz="${-0.6004359999999993 / scale} ${-0.05795399702183715 / scale} ${0.21110114892914889 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100885/textured_objs/original-3.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="${-0.6004359999999993 / scale} ${-0.05795399702183715 / scale} ${0.21110114892914889 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100885/textured_objs/original-3.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_2" type="revolute">
+		<origin xyz="${0.6004359999999993 / scale} ${0.05795399702183715 / scale} ${-0.21110114892914889 / scale}" />
+		<axis xyz="-1 0 0" />
+		<child link="link_2" />
+		<parent link="link_4" />
+		<limit lower="-0.8293804605477054" upper="1.426283064729766" effort="10.0" velocity="0.1" />
+	</joint>
+	<link name="link_3">
+		<visual name="switch-4">
+			<origin xyz="${-0.6004359999999993 / scale} ${-0.05795399702183715 / scale} ${0.21110114892914889 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100885/textured_objs/original-4.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="${-0.6004359999999993 / scale} ${-0.05795399702183715 / scale} ${0.21110114892914889 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100885/textured_objs/original-4.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_3" type="revolute">
+		<origin xyz="${0.6004359999999993 / scale} ${0.05795399702183715 / scale} ${-0.21110114892914889 / scale}" />
+		<axis xyz="-1 0 0" />
+		<child link="link_3" />
+		<parent link="link_4" />
+		<limit lower="-0.8293804605477054" upper="1.426283064729766" effort="10.0" velocity="0.1" />
+	</joint>
+	<link name="link_4">
+		<visual name="base_body-5">
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100885/textured_objs/original-5.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+			<geometry>
+				<mesh filename="package://switch_description/urdf/100885/textured_objs/original-5.obj" scale="${1 / scale} ${1 / scale} ${1 / scale}" />
+			</geometry>
+		</collision>
+	</link>
+	<joint name="joint_4" type="fixed">
+		<origin rpy="1.570796326794897 0 -1.570796326794897" xyz="${0 / scale} ${0 / scale} ${0 / scale}" />
+		<child link="link_4" />
+		<parent link="base" />
+	</joint>
+</robot>
