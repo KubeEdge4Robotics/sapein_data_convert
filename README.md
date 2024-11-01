@@ -4,10 +4,10 @@
 
 ## 基础格式改动以保证ROS可以加载
 
-1. 将原始的`mobility.urdf`改成`mobility.urdf.xacro`，这一步不是必须得，但是因为后面定义的缩放系数是一个宏，建议转换成`xacro`;
+1. 将原始的`mobility.urdf`改成`mobility.urdf.xacro`，这一步不是必须的，但是因为后面定义的缩放系数是一个宏，建议转换成`xacro`;
 2. 为了保证宏可以生效，在`robot`字段中加入命名空间`xmlns:xacro="http://wiki.ros.org/xacro"`;
 3. 定义宏`<xacro:property name="scale" value="100" />`，具体数值，可以在代码中设置；
-4. 对于类型为`revolute`或者`prismatic`类型的joint，在`limit`字段中缺少`effort`和`veloity`标签，加载会报错(在ubuntu20，ros noetic上测试)，因此加上对应的标签;
+4. 对于类型为`revolute`或者`prismatic`的joint，在`limit`字段中缺少`effort`和`veloity`标签，加载会报错(在ubuntu20，ros noetic上测试)，因此加上对应的标签;
 5. 调整mesh文件的路径；
 
 根据以上改动，使用`launch`下面的文件应该是可以加载sapien中的文件的；
@@ -38,5 +38,5 @@ python sapein_file_process.py
 ```
 cd sapien_data_convert
 source devel/setup.bash
-roslaunch data_convert display.launch id:100367  # 最后的数值代表sapien对应的资产编号，确保已经在urdf文件下面了
+roslaunch data_convert display.launch id:=100367  # 最后的数值代表sapien对应的资产编号，确保已经在urdf文件下面了
 ```
